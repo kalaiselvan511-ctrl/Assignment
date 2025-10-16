@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Note - Light Yagami</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* =============================
+       FIXED NAVIGATION BAR
+       ============================= */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 2px solid #e50914;
+    }
+
+    nav h1 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #e50914;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #e50914;
+    }
+
+    /* =============================
+       HERO SECTION
+       ============================= */
+    .hero {
+      height: 100vh;
+      background-image: url("Lite Yagami.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #e50914;
+      text-shadow: 3px 3px 10px black;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 6px black;
+    }
+
+    /* =============================
+       STICKY HEADER (AFTER HERO)
+       ============================= */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #1a1a1a;
+      padding: 12px 50px;
+      text-align: center;
+      color: #e50914;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #e50914;
+      z-index: 999;
+    }
+
+    /* =============================
+       ABOUT SECTION
+       ============================= */
+    .about {
+      background-color: #181818;
+      padding: 100px 60px;
+      letter-spacing: 1px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: justify;
+      border-left: 4px solid #e50914;
+    }
+
+    .about h2 {
+      text-align: center;
+      color: #e50914;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    /* =============================
+       FLOATING CONTACT BUTTON
+       ============================= */
+    .contact-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #e50914;
+      color: white;
+      padding: 15px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s, background 0.3s;
+      z-index: 1000;
+    }
+
+    .contact-btn:hover {
+      background-color: #b00610;
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- FIXED NAVIGATION BAR -->
+  <nav>
+    <h1>Death Note</h1>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Death Note: Light Yagami</h1>
+      <p>"I am Justice. I protect the innocent and those who fear evil."</p>
+    </div>
+  </section>
+
+  <!-- STICKY HEADER -->
+  <div class="sticky-header">⚡ The Power of the Death Note ⚡</div>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h2>About Light Yagami</h2>
+    <p>Light Yagami, a high school prodigy, discovers the mysterious Death Note—a notebook that grants its user the ability to kill anyone simply by writing their name. Driven by his vision of a world free from crime, he takes on the alias "Kira" and begins a dark crusade against evil.</p>
+    <p>As Light's ambition grows, his moral boundaries fade, leading to a psychological battle with the genius detective, L. This conflict between justice and power defines one of anime’s most iconic stories.</p>
+  </section>
+
+  <!-- FLOATING CONTACT BUTTON -->
+  <a href="#contact" class="contact-btn">Contact Us</a>
+
+</body>
+</html>
