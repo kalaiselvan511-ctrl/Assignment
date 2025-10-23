@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.moving{
+  
+  position:relative;
+  animation:slide 3s linear infinite;
+  color: red;
+}
+@keyframes slide{
+  0%{left:0;}
+  100%{left:900px;}
+}
+</style>
+</head>
+<body>
+    <h1>Animate text moving from left to right using @keyframes</h1>
+    <p class="moving"><b>LIGHT YAGAMI</b></p>
+</body>
+</html>

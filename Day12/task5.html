@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .container{
+        display: grid;
+        background-color: gray;
+        grid-template-columns: 2fr 2fr;
+        row-gap: 10px;
+        column-gap: 20px;
+        grid-template-areas: 
+        "header1" "header2"
+        "bottom1" "bottom2";
+        font-size: 30px;
+        margin-top: 100px;
+        padding-top: 20px;
+        padding-left: 50px;
+       
+
+        }
+        .header1{
+            background-color: blue;
+            height: 150px;
+            width: 250px;
+            text-align: center;
+           
+        }
+        .bottom1{
+            background-color: red;
+            height: 150px;
+            width: 250px;
+            text-align: center;
+        }
+        .header2{
+            background-color: green;
+            height: 150px;
+            width: 250px;
+            text-align: center;
+        }
+        .bottom2{
+            background-color: yellow;
+            height: 150px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header1">Blue box</div>
+    <div class="bottom1">Red box</div>
+    <div class="header2">Green box</div>
+    <div class="bottom2">Yellow box</div>
+    </div>
+</body>
+</html>
