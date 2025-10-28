@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    padding: 1rem;
+    text-align: center;
+    background: #333;
+    color: white;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .portfolio div {
+    background: lightgray;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .portfolio {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .portfolio {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<header>My Portfolio</header>
+<section class="portfolio">
+  <div>Project 1</div>
+  <div>Project 2</div>
+  <div>Project 3</div>
+  <div>Project 4</div>
+  <div>Project 5</div>
+  <div>Project 6</div>
+</section>
+</body>
+</html>

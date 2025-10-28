@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  .container {
+    display: flex;
+    gap: 1rem;
+  }
+  .container div {
+    flex: 1;
+    padding: 20px;
+    background: red;
+  }
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+    <h1>Task 2</h1>
+    <h1>Build a two-column layout that becomes one column on mobile</h1>
+  <div class="container">
+    <div>Column 1</div>
+    <div>Column 2</div>
+  </div>
+</body>
+</html>
