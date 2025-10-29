@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <h2>My favorite color</h2>
+  <input type="text" id="Input" placeholder="Enter your favorite color">
+  <button onclick="checkr()">Check Color</button>
+
+  <p id="message"></p>
+
+  <script>
+    function check() {
+      let color = document.getElementById("Input").value;
+      let message = "";
+
+      switch (color) {
+        case "red":
+          message = "Red is my fav";
+          break;
+        case "blue":
+          message = "Blue is my second fav.";
+          break;
+        case "green":
+          message = "Green is my third fav  ";
+          break;
+        case "yellow":
+          message = "Yellow is bright and cheerful!";
+          break;
+        default:
+          message = "That's a unique color choice!";
+      }
+
+      document.getElementById("message").innerText = message;
+    }
+  </script>
+
+</body>
+</html>

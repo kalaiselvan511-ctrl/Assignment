@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2>Task 9</h2>
+
+  <input type="number" id="ageInput" placeholder="Enter your age"><br><br>
+  <input type="text" id="subscribeInput" placeholder="Are you subscribed? (yes/no)"><br><br>
+
+  <button onclick="checkAccess()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAccess() {
+      let age = document.getElementById("ageInput").value;
+      let subscrib= document.getElementById("subscribeInput").value;
+      let result = document.getElementById("result");
+
+      if (age >= 18 && subscrib === "yes") {
+        result.innerText = "Welcome!";
+      } else {
+        result.innerText = "Your Not Ault";
+      }
+    }
+  </script>
+
+</body>
+</html>

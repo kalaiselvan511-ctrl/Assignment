@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #result {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Check Driving Eligibility</h2>
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <button onclick="checkDriving()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkDriving() {
+      let age = document.getElementById("ageInput").value;
+
+      if (age >= 18) {
+        document.getElementById("result").innerText = "You can drive ";
+      } else {
+        document.getElementById("result").innerText = "You cannot drive yet ";
+      }
+    }
+  </script>
+</body>
+</html>
