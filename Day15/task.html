@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Note: Light Yagami</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px double red;
+      z-index: 100;
+      backdrop-filter: blur(6px);
+      animation: slideDown 1s ease-out;
+    }
+
+    nav h1{
+      font-size: 24px;
+      color: red;
+      letter-spacing: 2px;
+      animation: glow 2s infinite alternate;
+    }
+
+    nav ul{
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a{
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover{
+      color: red;
+      transform: scale(1.1);
+    }
+
+    
+    .hero{
+      background-image: url(./Lite\ Yagami.jpg);
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero::after{
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .hero h1{
+      font-size: 38px;
+      color: red;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px red, 0 0 30px black;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p{
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 6px black;
+      z-index: 2;
+      animation: fadeInUp 2.5s ease-in-out;
+    }
+
+    .btn{
+      margin-top: 25px;
+      background-color: transparent;
+      border: 2px solid red;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      animation: fadeInUp 3s ease-in-out;
+    }
+
+    .btn:hover{
+      background-color: red;
+      color: black;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px red;
+    }
+
+   
+    .about{
+      padding: 80px 10%;
+      text-align: center;
+      background: #111;
+    }
+
+    .about h2{
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: red;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .about p{
+      font-size: 1.1rem;
+      color: #e3e3e3;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.8s ease-in-out;
+    }
+
+   
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-100%);}
+      to {transform: translateY(0);}
+    }
+
+    @keyframes glow {
+      0% {text-shadow: 0 0 10px red, 0 0 20px red;}
+      100% {text-shadow: 0 0 20px darkred, 0 0 30px red;}
+    }
+
+    
+    @media (max-width: 768px){
+      nav{
+        padding: 10px 25px;
+      }
+      .hero h1{
+        font-size: 26px;
+      }
+      .hero p{
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Death Note</h1>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="hero">
+    <h1>Light Yagami — Kira</h1>
+    <p>"I am Justice. I protect the innocent and those who fear evil."</p>
+    <button class="btn">Read More</button>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Light Yagami</h2>
+    <p>
+      Light Yagami, a high school prodigy, discovers the mysterious Death Note — a notebook
+      that grants its user the ability to kill anyone simply by writing their name. 
+    </p>
+    <p>
+      Driven by his vision of a world free from crime, he takes on the alias <strong>"Kira"</strong>
+      and begins a dark crusade against evil. As Light's ambition grows, his moral boundaries fade,
+      leading to a psychological battle with the genius detective, L.
+    </p>
+  </section>
+</body>
+</html>
