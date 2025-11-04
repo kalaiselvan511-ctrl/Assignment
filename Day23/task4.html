@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Animes</h1>
+<ul id="anime">
+    <li>Dragon ball</li>
+    <li>Naruto</li>
+    <li>Death note</li>
+</ul>
+<button onmouseleave="Click()">Click</button>
+<script>
+    function Click() {
+       let lst = document.getElementById("anime")
+      if (lst.firstChild) lst.removeChild(lst.firstChild)
+    }
+
+</script>
+</body>
+</html>

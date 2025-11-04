@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>document</title>
+</head>
+<body style="text-align:center; margin-top:50px;">
+
+<h2>Click a Button to Change Background Color</h2>
+<button class="colorBtn" data-color="lightcoral">Red</button>
+<button class="colorBtn" data-color="lightblue">Blue</button>
+<button class="colorBtn" data-color="lightgreen">Green</button>
+
+<script>
+let buttons = document.querySelectorAll(".colorBtn");
+
+buttons.forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    document.body.style.backgroundColor = this.getAttribute("data-color");
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body style="text-align:center; margin-top:50px;">
+
+<h2>Insert Formatted HTML Dynamically</h2>
+<button onclick="insertFormattedText()">Show Message</button>
+
+<div id="output"></div>
+
+<script>
+function insertFormattedText() {
+  document.getElementById("output").innerHTML = 
+    "<b>This is bold text</b> and <i>this is italic text</i> inserted dynamically!";
+}
+</script>
+
+</body>
+</html>

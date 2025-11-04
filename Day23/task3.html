@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Animes</h1>
+<ul id="anime">
+    <li>Dragon ball</li>
+    <li>Naruto</li>
+</ul>
+<button onmousemove="Click()">Click</button>
+<script>
+    function Click() {
+        let nt = document.createElement("li")
+        nt.textContent="Death Note"
+        document.getElementById("anime").appendChild(nt)
+        
+    }
+
+</script>
+</body>
+</html>

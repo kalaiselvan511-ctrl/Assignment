@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h2>Live Text Update Example</h2>
+<input type="text" id="textInput" oninput="updateText()" placeholder="Type something here...">
+<p id="displayText">Your text will appear here...</p>
+
+<script>
+function updateText() {
+  let inputValue = document.getElementById("textInput").value;
+  document.getElementById("displayText").innerText = inputValue;
+}
+</script>
+
+
+
+    
+</body>
+</html>
