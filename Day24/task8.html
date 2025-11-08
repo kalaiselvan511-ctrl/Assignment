@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link rel="icon" type="image/x-icon" href="./Lite Yagami.jpg">
+</head>
+<body>
+  <h3>Safe Calculator</h3>
+
+  <input type="number" id="num1" placeholder="Enter first number">  
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">−</option>
+    <option value="*">×</option>
+    <option value="/">÷</option>
+  </select>
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button id="calculate">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("calculate").addEventListener("click", function() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      const op = document.getElementById("operator").value;
+      const resultBox = document.getElementById("result");
+
+      try {
+        if (isNaN(n1) || isNaN(n2)) {
+          throw new Error("Please enter valid numbers!");
+        }
+
+        let result;
+
+        switch (op) {
+          case "+":
+            result = n1 + n2;
+            break;
+          case "-":
+            result = n1 - n2;
+            break;
+          case "*":
+            result = n1 * n2;
+            break;
+          case "/":
+            if (n2 === 0) throw new Error("Cannot divide by zero!");
+            result = n1 / n2;
+            break;
+          default:
+            throw new Error("Invalid operator!");
+        }
+
+        resultBox.textContent = "Result: " + result;
+        resultBox.style.color = "green";
+      } 
+      catch (error) {
+        resultBox.textContent = "Error: " + error.message;
+        resultBox.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

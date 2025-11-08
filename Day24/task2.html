@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./Lite Yagami.jpg">
+    <style>
+        body{
+            margin-left: 550px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Text</h1>
+    <br>
+    <input type="text" id="qw" placeholder="Type something">
+    <br>
+    <p id="er"></p>
+    <script>
+        document.getElementById("qw").addEventListener("input", function(){
+         document.getElementById("er").textContent= "TEXT :    " + this.value;
+         document.getElementById("er").style.color="red";
+
+        })
+    </script>
+
+
+    
+</body>
+</html>

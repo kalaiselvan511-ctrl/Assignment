@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="icon" type="image/x-icon" href="./Lite Yagami.jpg">
+</head>
+<body>
+  <h3 id="heading">Click the button to change my color!</h3>
+  <button id="colorBtn">Change Color</button>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("colorBtn").addEventListener("click", function() {
+      const message = document.getElementById("message");
+
+      try {
+
+        const heading = document.getElementById("heading");
+        if (!heading) {
+          throw new Error("Element not found!");
+        }
+
+  
+        const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+     
+        heading.style.color = randomColor;
+        message.textContent = "Color changed to " + randomColor;
+        message.style.color = "green";
+      } 
+      catch (error) {
+      
+        message.textContent = "Error: " + error.message;
+        message.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

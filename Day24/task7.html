@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./Lite Yagami.jpg">
+
+</head>
+<body>
+    <h1>Text Live Counter</h1>
+    <textarea  id="qw" rows="10" cols="50" placeholder="Type text..........."></textarea>
+    <p>character : <span id="re"></span></p>
+    <script>
+        let a = document.getElementById("qw");
+        let b = document.getElementById("re");
+       
+        a.addEventListener("input", function () {
+            b.textContent=a.value.length;
+            
+        })
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./Lite Yagami.jpg">
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form id="qw">
+        <label>Name</label>
+        <input type="text"  id="we"><br><br>
+       <label>  password</label>
+        <input type="password" id="er"><br><br>
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        document.getElementById("qw").addEventListener("submit",function (dd) {
+            dd.preventDefault();
+
+            try{
+                let usr = document.getElementById("we").value;
+                let pas = document.getElementById("er").value;
+
+                if (usr ==="" || pas ==="") {
+                    throw new Error("Please fill the all feild");   
+                }
+                alert("Form submit successfully.....")
+
+            }catch(eee){
+                alert("Error :" + eee.message)
+            }
+           
+        })
+    </script>
+</body>
+</html>

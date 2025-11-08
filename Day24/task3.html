@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./Lite Yagami.jpg">
+    <style>
+        body{
+            margin-left: 500px;
+            margin-top: 150px;
+        }
+        #we{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:rgb(255, 0, 0);">User RegistrationForm</h1>
+    <form  id="qw">
+        <table>
+          <tr>
+         <td><label> Name:</label></td>
+       <td><input type="text" name="Name" value=""></td> 
+          </tr>  
+          <tr>
+          <td><label>Password :</label></td>  
+       <td><input type="password" name="Password" value=""></td> 
+          </tr>
+
+        
+        
+
+        </table>
+        <br><br>
+        <button type="submit" id="we">submit</button>
+
+    </form>
+    <script>
+        document.getElementById("we").style.color="green"
+        document.getElementById("qw").addEventListener("submit", function(kk){
+            kk.preventDefault();
+            alert("Form submit successfully")
+            
+
+        })
+    </script>
+</body>
+</html>
