@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User name and public rep</h1>
+    <p >User name :<strong id="use"></strong></p>
+    <p >Public Repository  :<strong id="pub"></strong> </p>
+    <script>
+        fetch("https://api.github.com/users/kalaiselvan511-ctrl")
+        .then(res=>res.json())
+        .then(data =>{
+            document.getElementById("use").innerHTML=data.login
+            document.getElementById("pub").innerHTML=data.public_repos
+        })
+        .catch(error =>console.error("Error",error)
+        )
+    </script>
+    
+</body>
+</html>

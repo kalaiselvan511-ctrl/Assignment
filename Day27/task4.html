@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Fetch with async/await</h1>
+     <button onclick="i()">Button</button>
+     <p id="tty"></p>
+    <script>
+        async function i() {
+            try{
+            let res = await fetch("https://api.github.com/users/kalaselvan511-ctrl");
+            if (!res.ok) throw new Error("NOT FETCH"); 
+            let data = await res.json();
+            document.getElementById("tty").innerHTML=data.login
+            document.getElementById("tty").style.color="green"
+            }
+            catch(error){
+               alert("Error :" + error.message);
+               
+            }
+
+            
+        }
+    </script>
+
+
+    
+</body>
+</html>

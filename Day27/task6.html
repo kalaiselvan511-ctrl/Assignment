@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>FOLLOWERS</h1>
+
+    <button onclick="i()"> Click me...!</button>
+
+  <p style="color: blue;">FOLLOWERS  :<strong id="gh"></strong></p>  
+    <script>
+      async  function i() {
+
+            try {
+             let res= await fetch("https://api.github.com/users/kalaiselvan511-ctrl")
+            if (!res.ok) throw new Error("Not fetched ");
+            const data=  await res.json()
+            document.getElementById("gh").innerHTML=data.followers;
+            document.getElementById("gh").style.backgroundColor="lightgreen"
+
+                
+            } catch (error) {
+                alert("Error : " + error.message)
+                
+            }
+
+            
+        }
+    </script>
+    
+</body>
+</html>
