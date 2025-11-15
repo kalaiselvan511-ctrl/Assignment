@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Local storage</h1>
+    <label > Name :</label>
+    <input type="text" id="name" placeholder="Enter your name"> <br><br>
+    <label > Course :</label>
+    <input type="text" id="course" placeholder="Enter your Course"><br><br>
+    <button id="save" onclick="i()">save</button><br><br>
+    <button id="show" onclick="j()"> show</button>
+    <p id="no"></p>
+
+
+    <script>
+        function i() {
+            let n1 = document.getElementById("name").value;
+            let c1 = document.getElementById("course").value;
+            
+            localStorage.setItem('username',n1)
+            localStorage.setItem('Course',c1)
+            alert("Data saved")
+        }
+        function j() {
+            let name1 = localStorage.getItem('username');
+            let coures1 = localStorage.getItem('course');
+
+            document.getElementById("no").innerHTML ="Name :" + name1 +  "     Course :" + coures1;
+            document.getElementById("no").style.color ="Red"
+            document.getElementById("no").style.fontSize ="100px"
+
+            
+
+            
+        }
+    </script>
+    
+</body>
+</html>

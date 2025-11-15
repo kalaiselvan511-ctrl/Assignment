@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Save Location in localStorage</h2>
+
+<button onclick="getLocation()">Get Location</button>
+<button onclick="saveLocation()">Save Location</button>
+
+<p id="output"></p>
+
+<script>
+
+    let lat = "";
+    let lon = "";
+
+    function getLocation() {
+        navigator.geolocation.getCurrentPosition(pos => {
+            lat = pos.coords.latitude;
+            lon = pos.coords.longitude;
+
+            document.getElementById("output").innerHTML =
+                "Latitude: " + lat + "<br>Longitude: " + lon;
+        });
+    }
+
+    function saveLocation() {
+        const loc = { latitude: lat, longitude: lon };
+        localStorage.setItem("savedLocation", JSON.stringify(loc));
+
+        console.log("Saved:", loc);
+    }
+
+</script>
+
+</body>
+</html>

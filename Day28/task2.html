@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Session Time</h2>
+<p id="timeBox">Loading...</p>
+
+<script>
+    
+    if (!sessionStorage.getItem("sessionTime")) {
+        sessionStorage.setItem("sessionTime", 0);
+    }
+
+    setInterval(() => {
+        let time = Number(sessionStorage.getItem("sessionTime"));
+        time++;
+        sessionStorage.setItem("sessionTime", time);
+
+        document.getElementById("timeBox").innerText =
+            "You have spent " + time + " seconds in this session.";
+    }, 1000);
+</script>
+
+</body>
+</html>

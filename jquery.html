@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- $(slector).action(); -->
+
+    <button id="btn"> click</button>
+    <p>this is para</p>
+    <br>
+<br>
+    <button id="btn2"> click</button><br>
+    <div id="qw" style="width: 100px; height: 100px; background-color:red;"></div>
+    <br>
+
+    <button id="btn3"> click</button><br>
+    <div id="qe" style="width: 100px; height: 100px; background-color:red;"></div>
+
+    <script>
+        $("#btn").click(function () {
+            $("p").hide();
+            
+        })
+        $("#btn2").click(function(){
+            $("#qw").toggle(800);
+        })
+         $("#btn3").click(function(){
+            $("#qe").fadeToggle();
+        })
+    </script>
+
+    
+
+    
+</body>
+</html>

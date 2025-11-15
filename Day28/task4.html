@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Read & Log Data Using JSON.parse()</h2>
+
+<button onclick="saveData()">Save Data</button>
+<button onclick="readData()">Read Data</button>
+
+<script>
+
+    function saveData() {
+        const user = {
+            name: "Kalai",
+            age: 20,
+            city: "Chennai"
+        };
+
+        const jsonData = JSON.stringify(user);
+
+        localStorage.setItem("userData", jsonData);
+
+        console.log("Saved:", jsonData);
+    }
+
+    function readData() {
+       
+        const stored = localStorage.getItem("userData");
+
+       
+        const parsed = JSON.parse(stored);
+
+        
+        console.log("Parsed Object:", parsed);
+        console.log("Name:", parsed.name);
+        console.log("Age:", parsed.age);
+        console.log("City:", parsed.city);
+    }
+
+</script>
+
+</body>
+</html>

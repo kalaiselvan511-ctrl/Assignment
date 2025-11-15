@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Experiment: console.log(), console.table(), and breakpoints</h2>
+
+<button onclick="testConsole()">Run Test</button>
+
+<script>
+    function testConsole() {
+
+      
+        const user = {
+            name: "Kalai",
+            age: 20,
+            course: "JavaScript",
+            city: "Chennai"
+        };
+
+
+        console.log("Logging object with console.log():", user);
+
+
+        console.table(user);
+
+ 
+        debugger;  
+
+        console.log("Breakpoint passed successfully!");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Save Object as JSON in localStorage</h2>
+
+<input id="name" placeholder="Enter Name"><br><br>
+<input id="age" placeholder="Enter Age"><br><br>
+<input id="course" placeholder="Enter Course"><br><br>
+
+<button onclick="saveObject()">Save Data</button>
+
+<h3>Stored Data:</h3>
+<p id="result"></p>
+
+<script>
+    function saveObject() {
+        
+        const user = {
+            name: document.getElementById("name").value,
+            age: document.getElementById("age").value,
+            course: document.getElementById("course").value
+        };
+
+
+        const jsonData = JSON.stringify(user);
+
+
+        localStorage.setItem("userData", jsonData);
+
+        const saved = JSON.parse(localStorage.getItem("userData"));
+
+        document.getElementById("result").innerHTML =
+            "Name: " + saved.name +
+            "<br>Age: " + saved.age +
+            "<br>Course: " + saved.course;
+    }
+    document.getElementById("result").style.color="green"
+</script>
+
+</body>
+</html>
