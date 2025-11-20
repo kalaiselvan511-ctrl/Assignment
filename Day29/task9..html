@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Fade-In</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .section {
+            display: none;
+            padding: 20px;
+            margin: 10px 0;
+            background: #e0e0e0;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+<button id="showSections">Fade In Portfolio Sections</button>
+
+<div class="section">About Me</div>
+<div class="section">Projects</div>
+<div class="section">Skills</div>
+<div class="section">Contact</div>
+
+<script>
+    $("#showSections").click(function(){
+        $(".section").each(function(i){
+            $(this).delay(300 * i).fadeIn();
+        });
+    });
+</script>
+
+</body>
+</html>

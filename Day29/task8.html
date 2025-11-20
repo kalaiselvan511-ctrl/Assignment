@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Slide</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #notify {
+            width: 300px;
+            padding: 15px;
+            background: gold;
+            display: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="showNotify">Show Notification</button>
+
+<div id="notify">
+    This is a sliding notification message!
+</div>
+
+<script>
+    $("#showNotify").click(function(){
+        $("#notify").slideToggle();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fade Gallery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<img id="galleryImg" src="./asta.jpg" width="250">
+
+<br><br>
+<button id="fadeOut">Fade Out</button>
+<button id="fadeIn">Fade In</button>
+
+<script>
+    $("#fadeOut").click(function(){
+        $("#galleryImg").fadeOut(3000);
+    });
+    $("#fadeIn").click(function(){
+        $("#galleryImg").fadeIn(3000);
+    });
+</script>
+
+</body>
+</html>

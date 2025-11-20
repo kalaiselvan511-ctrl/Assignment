@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Image</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<img id="photo" src="./asta.jpg" width="150">
+
+<br><br>
+<button id="toggleImg">Toggle Image</button>
+
+<script>
+    $("#toggleImg").click(function(){
+        $("#photo").toggle(5000);
+    });
+</script>
+
+</body>
+</html>

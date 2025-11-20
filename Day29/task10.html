@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h3>Question: What is 2 + 2?</h3>
+
+<button id="showAnswer">Show Answer</button>
+<button id="hideAnswer">Hide Answer</button>
+
+<p id="answer" style="display:none;">Answer: 4</p>
+
+<script>
+    $("#showAnswer").click(function(){
+        $("#answer").show();
+    });
+    $("#hideAnswer").click(function(){
+        $("#answer").hide();
+    });
+</script>
+
+</body>
+</html>

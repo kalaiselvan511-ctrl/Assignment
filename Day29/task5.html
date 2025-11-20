@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<div id="box" style="width:200px;height:100px;background:lightblue;display:none;">
+    Sliding Box Content
+</div>
+
+<br>
+<button id="slideBtn">Slide Toggle</button>
+
+<script>
+    $("#slideBtn").click(function(){
+        $("#box").slideToggle();
+    });
+</script>
+
+</body>
+</html>
