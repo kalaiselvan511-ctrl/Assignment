@@ -9,6 +9,7 @@ description varchar(20)
 
 insert into department(id, name, description)
 values
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 (1 , "Karnan", "Student"),
 (2 , "Ajay", "Worker"),
@@ -18,6 +19,11 @@ values
 (2 , "pradeep", "Worker"),
 (3 , "kabil", "Teacher");
 >>>>>>> 85821faba297752a86377618c21752115b7112c7
+=======
+(1 , "Kalai", "Student"),
+(2 , "pradeep", "Worker"),
+(3 , "kabil", "Teacher");
+>>>>>>> Stashed changes
 
 select name from department;
 
