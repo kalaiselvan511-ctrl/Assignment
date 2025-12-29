@@ -1,0 +1,23 @@
+
+
+import './App.css'
+import CounterReducer from './Day49/task01'
+import AuthReducer from './Day49/task02'
+import ThemeReducer from './Day49/task03'
+import CartReducer from './Day49/task04'
+
+function App() {
+ 
+
+  return (
+    <>
+    <CounterReducer/>
+    <AuthReducer/>
+    <ThemeReducer/>
+    <CartReducer/>
+
+    </>
+  )
+}
+
+export default App
